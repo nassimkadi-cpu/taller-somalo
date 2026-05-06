@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nassim - Portfolio</title>
+    <meta name="description" content="Portfolio de Nassim - Estudiante de 1º GM Informática" />
+    <title>Nassim — Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
       <nav class="nav">
         <a href="#inicio" class="logo">Nassim</a>
-        <button class="nav-toggle" aria-label="Abrir menú">
+        <button class="nav-toggle" aria-label="Menú">
           <span></span>
           <span></span>
           <span></span>
@@ -30,43 +31,51 @@
     <main>
       <section id="inicio" class="hero">
         <div class="hero-content">
-          <p class="hero-subtitle">Hola, soy</p>
-          <h1 class="hero-title">Nassim</h1>
-          <p class="hero-description">Estudiante de 1º GM Informática en Salesianos Los Boscos</p>
-          <p class="hero-passion">Me apasionan los <strong>videojuegos</strong> y el desarrollo web</p>
-          <a href="#proyectos" class="btn">Ver proyectos</a>
+          <p class="hero-subtitle">Estudiante de Informatica</p>
+          <h1 class="hero-title">Hola, soy <span class="highlight">Nassim</span></h1>
+          <p class="hero-description">1º GM Informática en Salesianos Los Boscos. Me gusta crear cosas para la web y juego cuando puedo.</p>
+          <p class="hero-passion">Apasionado de los <strong>videojuegos</strong> y el desarrollo web</p>
+          <a href="#proyectos" class="btn">
+            Ver proyectos
+            <span>→</span>
+          </a>
         </div>
         <div class="hero-visual">
-          <div class="code-block">
-            <div class="code-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+          <div class="terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">nassim.js</span>
             </div>
-            <div class="code-content"><span class="keyword">const</span> <span class="var">nassim</span> = {
-  role: <span class="string">"estudiante"</span>,
-  passion: <span class="string">"videojuegos"</span>,
-  skills: [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"Python"</span>, <span class="string">"JS"</span>, <span class="string">"Java"</span>],
-  studying: <span class="string">"1º GM Informática"</span>
-};</div>
+            <div class="terminal-body">
+              <div class="line"><span class="kw">const</span> <span class="var">nassim</span> = {</div>
+              <div class="line"><span class="prop">  role</span>: <span class="str">"estudiante"</span>,</div>
+              <div class="line"><span class="prop">  passion</span>: <span class="str">"videojuegos"</span>,</div>
+              <div class="line"><span class="prop">  skills</span>: [<span class="str">"HTML"</span>, <span class="str">"CSS"</span>, <span class="str">"JS"</span>],</div>
+              <div class="line"><span class="prop">  school</span>: <span class="str">"Salesianos"</span></div>
+              <div class="line">};</div>
+              <div class="line"><span class="comment">// Ready to build!</span></div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="sobre-mi" class="about">
         <h2 class="section-title">Sobre mí</h2>
-        <div class="about-content">
-          <div class="about-card">
-            <p>Soy estudiante de Informática en <strong>Salesianos Los Boscos</strong>. Me encanta crear cosas para la web y juego siempre que puedo.</p>
-            <p>Mi objetivo es especializarme en <strong>desarrollo web</strong> y crear experiencias digitales increíbles.</p>
-          </div>
-          <div class="skills-grid">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Java</span>
-          </div>
+        <div class="about-card">
+          <p>Estudio <strong>Informática</strong> en Salesianos Los Boscos. Me encanta diseñar y desarrollar para la web, creando experiencias digitales que funcione bien y se vean bien.</p>
+          <p>Busco especializarme en desarrollo web, combinando código limpio con buena interfaz de usuario.</p>
+        </div>
+        <p class="skills-label">Tecnologías</p>
+        <div class="skills-grid">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Java</span>
         </div>
       </section>
 
@@ -75,7 +84,7 @@
         <div class="projects-grid">
           <article class="project-card">
             <h3 class="project-title">Mi Proyecto</h3>
-            <p class="project-description">Descripción breve del proyecto. Tecnologías usadas y qué hace.</p>
+            <p class="project-description">Proyecto breve descripción. Tecnología usada y funcionalidad principal.</p>
             <div class="project-tags">
               <span class="project-tag">HTML</span>
               <span class="project-tag">CSS</span>
@@ -83,23 +92,19 @@
           </article>
           <article class="project-card">
             <h3 class="project-title">Otro Proyecto</h3>
-            <p class="project-description">Descripción breve del proyecto. Tecnologías usadas y qué hace.</p>
+            <p class="project-description">Proyecto breve descripción. Tecnología usada y funcionalidad principal.</p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">Python</span>
             </div>
           </article>
           <article class="project-card">
-            <h3 class="project-title">Proyecto Propio</h3>
-            <p class="project-description">Descripción breve del proyecto. Tecnologías usadas y qué hace.</p>
+            <h3 class="project-title">Desarrollo Android</h3>
+            <p class="project-description">Aplicación móvil desarrollada en Android Studio.</p>
             <div class="project-tags">
               <span class="project-tag">Java</span>
+              <span class="project-tag">Android</span>
             </div>
-          </article>
-          <article class="project-card">
-            <h3 class="project-title">Desarrollo Android</h3>
-            <p class="project-description"></p>
-            <div class="project-tags"></div>
           </article>
         </div>
       </section>
@@ -107,14 +112,17 @@
       <section id="contacto" class="contact">
         <h2 class="section-title">Contacto</h2>
         <div class="contact-content">
-          <p>¿Quieres trabajar conmigo o simplemente hablar? ¡Escríbeme!</p>
-          <a href="mailto:tu@email.com" class="btn">Enviar email</a>
+          <p>¿Hablamos? Puedo ayudarte con proyectos web o simplemente charlar.</p>
+          <a href="mailto:tu@email.com" class="btn">
+            Enviar email
+            <span>→</span>
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© 2026 Nassim. Hecho con código.</p>
+      <p>© 2026 Nassim</p>
     </footer>
 
     <script>
