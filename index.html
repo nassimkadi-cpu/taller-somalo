@@ -3,10 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mi portfolio</title>
+    <title>Nassim - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Mi portfolio</h1>
+    <header class="header">
+      <nav class="nav">
+        <a href="#inicio" class="logo">Nassim</a>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <p class="hero-subtitle">Hola, soy</p>
+          <h1 class="hero-title">Nassim</h1>
+          <p class="hero-description">Estudiante de 1º GM Informática en Salesianos Los Boscos</p>
+          <p class="heroPassion">Me apasionan los <strong>videojuegos</strong> y el desarrollo web</p>
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        </div>
+        <div class="hero-visual">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <pre class="code-content"><code><span class="keyword">const</span> <span class="var">nassim</span> = {
+  role: <span class="string">"desarrollador"</span>,
+  passion: <span class="string">"videojuegos"</span>,
+  skills: [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"Python"</span>, <span class="string">"JS"</span>, <span class="string">"Java"</span>],
+  studying: <span class="string">"1º GM Informática"</span>
+};</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="about">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-content">
+          <div class="about-card">
+            <p>Soy estudiante de Informática en <strong>Salesianos Los Boscos</strong>. Me encanta crear cosas para la web y juego siempre que puedo.</p>
+            <p>Mi objetivo es especializarme en <strong>desarrollo web</strong> y crear experiencias digitales increíbles.</p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-tag">HTML</div>
+            <div class="skill-tag">CSS</div>
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">Java</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="projects">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-icon">🎮</div>
+            <h3 class="project-title">Mi Proyecto</h3>
+            <p class="project-description">Descripción breve del proyecto. Tecnologías usadas y qué hace.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3 class="project-title">Otro Proyecto</h3>
+            <p class="project-description">Descripción breve del proyecto. Tecnologías usadas y qué hace.</p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Python</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-icon">⚙️</div>
+            <h3 class="project-title">Projeto Propio</h3>
+            <p class="project-description">Descripción breve del proyecto. Tecnologías usadas y qué hace.</p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-content">
+          <p>¿Quieres trabajar conmigo o simplemente hablar? ¡Escríbeme!</p>
+          <a href="mailto:tu@email.com" class="btn btn-secondary">Enviar email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Nassim. Hecho con ❤️ y código.</p>
+    </footer>
+
+    <script>
+      document.querySelector('.nav-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.toggle('active');
+        document.querySelector('.nav-toggle').classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.nav-menu').classList.remove('active');
+          document.querySelector('.nav-toggle').classList.remove('active');
+        });
+      });
+    </script>
   </body>
 </html>
